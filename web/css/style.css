@@ -1040,7 +1040,9 @@ a.totop-link {
    #Last Screen
    ========================================================================== */
 .introduction-end {
-    background: url(../images/develop.png)no-repeat right top;
+    background: url(../images/develop.png) no-repeat;
+    background-size: 50% !important;
+    background-position: 10% !important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
