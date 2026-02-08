@@ -14,6 +14,7 @@ const pillars = [
     'AI',
 ];
 
+
 const Sidebar = ({ activeSection, onNavigate }) => {
     return (
         <aside className="fixed left-0 top-0 h-screen w-52 bg-ink text-newsprint z-50 flex flex-col max-md:fixed max-md:w-full max-md:h-auto border-r-2 border-ink" id="menu">
