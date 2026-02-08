@@ -174,6 +174,7 @@ const ExperienceItem = ({ logo, company, url, role, period, highlights, details,
                         <span className="text-xs text-ink-light uppercase tracking-widest" style={{ fontFamily: "'Oswald', sans-serif" }}>{period}</span>
                     </div>
                 </div>
+
                 <div className="w-2/3 max-md:w-full text-ink-light">
 
                     <span className="block mb-4 text-xs text-ink-light">{stack}</span>
@@ -217,7 +218,7 @@ const Experience = () => {
                     </p>
                 </div>
 
-                <hr className="rule-thin mb-6" />
+                <hr className="mx-auto max-w-175 rule-thin mb-6" />
 
                 <div className="w-full relative mx-auto">
                     {experiences.map(({ logo, company, url, role, period, highlights, details, stack }, index) => {

@@ -48,7 +48,7 @@ const Contact = () => {
                 </div>
                 <div className="rule-double mb-8" />
 
-                <div className="w-full relative mx-auto">
+                <div className="mx-auto max-w-175 w-full relative mx-auto">
                     <div className="flex flex-wrap max-md:flex-col">
 
                         <div className="w-1/2 max-md:w-full mb-8 pr-6 max-md:pr-0 border-r max-md:border-r-0 border-rule">

@@ -7,7 +7,7 @@ import {
     SiDocker, SiKubernetes, SiGit, SiGithubactions,
     SiFigma,
 } from 'react-icons/si';
-import { FaEthereum, FaWallet, FaLink, FaBitcoin, FaServer, FaLock, FaDesktop, FaCreditCard, FaRobot, FaComments } from 'react-icons/fa';
+import { FaEthereum, FaWallet, FaLink, FaBitcoin, FaServer, FaLock, FaDesktop, FaCreditCard, FaRobot, FaComments, FaFolderOpen } from 'react-icons/fa';
 import { HiDevicePhoneMobile } from 'react-icons/hi2';
 import { MdApi, MdSmartphone } from 'react-icons/md';
 
@@ -101,7 +101,7 @@ const Skills = () => {
                 </div>
                 <div className="rule-double mb-8" />
 
-                <div className="max-w-2xl mx-auto mb-6">
+                <div className="max-w-175 mx-auto mb-6">
                     <p className="text-sm leading-relaxed text-justify text-ink-light" style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}>
                         <span className="text-4xl font-bold float-left mr-2 leading-[0.8] text-brand">14</span>
                         years shipping production JavaScript — full stack, from database schema to the pixel the user sees.
@@ -112,7 +112,7 @@ const Skills = () => {
                     </p>
                 </div>
 
-                <div className="max-w-2xl mx-auto mb-6 border-l-3 border-brand pl-4">
+                <div className="max-w-175 mx-auto mb-6 border-l-3 border-brand pl-4">
                     <p className="text-xs text-ink-light leading-relaxed italic" style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}>
                         I use LLMs as an exoskeleton — prototyping, research, acceleration.
                         But I set the architecture, review every line, and never ship without validation.
@@ -120,12 +120,15 @@ const Skills = () => {
                     </p>
                 </div>
 
-                <hr className="rule-thin my-8" />
+                <hr className="mx-auto max-w-175 rule-thin my-10" />
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div className="mx-auto max-w-175 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                     {skillCategories.map(({ title, skills }) => (
                         <div key={title}>
-                            <h4 className="text-dark font-bold mb-2 uppercase text-xs tracking-[0.2em] border-b border-rule pb-1" style={{ fontFamily: "'Oswald', sans-serif" }}>{title}</h4>
+                            <h4 className="text-dark font-bold mb-2 uppercase text-xs tracking-[0.2em] border-b border-rule pb-1 flex items-center gap-1.5" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                                <FaFolderOpen className="shrink-0" />
+                                {title}
+                            </h4>
                             <ul className="m-0 p-0">
                                 {skills.map(({ name, icon }) => (
                                     <li key={name} className="list-none py-0.5 text-xs text-ink-light flex items-center gap-1.5">
