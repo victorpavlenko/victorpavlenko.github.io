@@ -20,11 +20,6 @@ const Introduction = () => {
     const [showCreep, setShowCreep] = useState(false);
 
     useEffect(() => {
-        const img = new Image();
-        img.src = '/images/me-creep.webp';
-    }, []);
-
-    useEffect(() => {
         if (!matrixExited) return;
 
         const showTimer = setTimeout(() => {

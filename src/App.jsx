@@ -27,6 +27,11 @@ function App() {
     }
   }, [matrixExited]);
 
+  useEffect(() => {
+    ['/images/me.webp', '/images/me-matrxi-1.webp', '/images/me-matrxi-2.webp', '/images/me-creep.webp']
+      .forEach(src => { const img = new Image(); img.src = src; });
+  }, []);
+
   return (
     <div className="flex h-screen overflow-hidden max-md:flex-col max-md:h-auto max-md:overflow-visible">
       {isMatrix && <MatrixRain />}
