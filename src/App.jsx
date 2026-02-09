@@ -48,8 +48,8 @@ function App() {
               onClick={() => { if (!isActive) scrollTo(id); }}
               className={`max-md:min-h-dvh shrink-0 h-screen snap-start snap-always overflow-y-auto no-scroll transition-all duration-500 max-md:!h-auto max-md:!w-full max-md:!shrink max-md:!blur-none max-md:!opacity-100 max-md:!cursor-auto max-md:overflow-visible ${
                 isActive
-                  ? 'w-220 max-w-full'
-                  : 'w-220 max-w-full blur-[1px] opacity-20 cursor-pointer'
+                  ? 'w-216 max-w-full'
+                  : 'w-216 max-w-full blur-[1px] opacity-20 cursor-pointer'
               }`}
             >
               <Component />
