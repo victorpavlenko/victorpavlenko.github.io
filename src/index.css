@@ -180,13 +180,13 @@ html[data-theme="matrix"] #experience .group img {
 
 html[data-matrix-level="1"] #introduction .bg-contain,
 html[data-matrix-level="2"] #introduction .bg-contain {
-    background-image: url(/images/me-matrxi-1.png) !important;
+    background-image: url(/images/me-matrxi-1.webp) !important;
     filter: none !important;
 }
 
 html[data-matrix-level="3"] #introduction .bg-contain,
 html[data-matrix-level="4"] #introduction .bg-contain {
-    background-image: url(/images/me-matrxi-2.png) !important;
+    background-image: url(/images/me-matrxi-2.webp) !important;
     filter: none !important;
 }
 

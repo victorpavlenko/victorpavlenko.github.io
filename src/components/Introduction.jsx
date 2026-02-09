@@ -21,7 +21,7 @@ const Introduction = () => {
 
     useEffect(() => {
         const img = new Image();
-        img.src = '/images/me-creep.png';
+        img.src = '/images/me-creep.webp';
     }, []);
 
     useEffect(() => {
@@ -42,8 +42,8 @@ const Introduction = () => {
     }, [matrixExited, clearExited]);
 
     const photoUrl = showCreep
-        ? '/images/me-creep.png'
-        : '/images/me.jpg';
+        ? '/images/me-creep.webp'
+        : '/images/me.webp';
 
     return (
         <article className="relative h-full min-h-screen max-md:min-h-dvh bg-ink">
