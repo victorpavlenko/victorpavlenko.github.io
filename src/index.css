@@ -72,3 +72,159 @@ h1, h2, h3, h4, h5, h6 {
 .no-scroll::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.2);
 }
+
+
+/* =====================================================
+   MATRIX THEME
+   ===================================================== */
+
+html[data-theme="matrix"] {
+    --color-brand: #00ff41;
+    --color-dark: #050505;
+    --color-newsprint: #0a0e02;
+    --color-newsprint-dark: #060a01;
+    --color-ink: #00ff41;
+    --color-ink-light: #00cc33;
+    --color-rule: #0a3a0a;
+}
+
+html[data-theme="matrix"] body {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    background: #000;
+    color: #00ff41;
+}
+
+html[data-theme="matrix"] ::selection {
+    background: #00ff41;
+    color: #000;
+}
+
+/* Override fonts to monospace */
+html[data-theme="matrix"] h1,
+html[data-theme="matrix"] h2,
+html[data-theme="matrix"] h3,
+html[data-theme="matrix"] h4,
+html[data-theme="matrix"] h5,
+html[data-theme="matrix"] h6 {
+    font-family: 'Share Tech Mono', monospace !important;
+}
+
+html[data-theme="matrix"] p,
+html[data-theme="matrix"] span,
+html[data-theme="matrix"] a,
+html[data-theme="matrix"] li,
+html[data-theme="matrix"] button,
+html[data-theme="matrix"] strong,
+html[data-theme="matrix"] em,
+html[data-theme="matrix"] div {
+    font-family: 'Share Tech Mono', monospace !important;
+}
+
+/* --- Inverted sections: sidebar & intro use bg-ink + text-newsprint --- */
+/* Scope CSS variables so bg-ink=dark, text-newsprint=green inside them  */
+
+html[data-theme="matrix"] #menu {
+    --color-ink: #050505;
+    --color-newsprint: #00ff41;
+    border-right-color: #003300 !important;
+    background-color: rgba(5, 5, 5, 0.92) !important;
+}
+
+html[data-theme="matrix"] #introduction > article {
+    --color-ink: #050505;
+    --color-newsprint: #00ff41;
+}
+
+/* Contact big buttons also use bg-ink/90 text-newsprint */
+html[data-theme="matrix"] #contact a[class*="bg-ink"] {
+    --color-ink: #050505;
+    --color-newsprint: #00ff41;
+}
+
+/* --- Content sections: semi-transparent to show rain --- */
+
+html[data-theme="matrix"] #skills > article,
+html[data-theme="matrix"] #experience > article,
+html[data-theme="matrix"] #contact > article {
+    background-color: rgba(5, 5, 5, 0.88) !important;
+}
+
+html[data-theme="matrix"] #introduction > article {
+    background-color: rgba(5, 5, 5, 0.95) !important;
+}
+
+/* --- Rules --- */
+
+html[data-theme="matrix"] .rule-double {
+    border-top-color: #00ff41;
+    border-bottom-color: #00ff41;
+}
+
+html[data-theme="matrix"] .rule-thin {
+    border-top-color: #003300;
+}
+
+/* --- CRT distortion filter on entire page --- */
+
+html[data-theme="matrix"] #root {
+    filter: url(#crt-warp);
+}
+
+/* --- Hide Experience company logos in matrix mode --- */
+
+html[data-theme="matrix"] #experience .group img {
+    display: none !important;
+}
+
+/* --- Intro photo: swap to matrix version by level --- */
+
+html[data-matrix-level="1"] #introduction .bg-contain,
+html[data-matrix-level="2"] #introduction .bg-contain {
+    background-image: url(/images/me-matrxi-1.png) !important;
+    filter: none !important;
+}
+
+html[data-matrix-level="3"] #introduction .bg-contain,
+html[data-matrix-level="4"] #introduction .bg-contain {
+    background-image: url(/images/me-matrxi-2.png) !important;
+    filter: none !important;
+}
+
+/* --- Focus / scrollbar --- */
+
+html[data-theme="matrix"] *:focus-visible {
+    outline-color: #00ff41;
+}
+
+html[data-theme="matrix"] .no-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 255, 65, 0.2);
+}
+
+/* --- Borders on hover states --- */
+
+html[data-theme="matrix"] .border-rule {
+    border-color: #0a3a0a;
+}
+
+/* Contact link buttons border */
+html[data-theme="matrix"] #contact a[class*="border-rule"] {
+    border-color: #003300;
+}
+
+html[data-theme="matrix"] #contact a:hover {
+    border-color: #00ff41;
+}
+
+/* --- Glow effect on headings --- */
+
+html[data-theme="matrix"] h2 {
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.3), 0 0 40px rgba(0, 255, 65, 0.1);
+}
+
+/* --- Brand accent border --- */
+
+html[data-theme="matrix"] .border-brand\/30 {
+    border-color: rgba(0, 255, 65, 0.3);
+}
+
+/* --- Experience: no img hover needed, logos hidden --- */

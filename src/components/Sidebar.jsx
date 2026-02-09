@@ -1,4 +1,5 @@
 import { Mail, Linkedin } from 'lucide-react';
+import { useTheme } from '../contexts/ThemeContext';
 
 const navItems = [
     { sectionId: 'introduction', label: 'Home' },
@@ -16,9 +17,11 @@ const pillars = [
 
 
 const Sidebar = ({ activeSection, onNavigate }) => {
+    const { isMatrix, enterMatrix } = useTheme();
+
     return (
         <aside className="fixed left-0 top-0 h-screen w-52 bg-ink text-newsprint z-50 flex flex-col max-md:fixed max-md:w-full max-md:h-auto border-r-2 border-ink" id="menu">
-            <div className="p-6 text-center max-md:p-2">
+            <div className="p-6 text-center max-md:p-2 relative">
                 <div className="text-xs tracking-[0.4em] uppercase text-newsprint/50" style={{ fontFamily: "'Oswald', sans-serif" }}>PAVLENKO</div>
                 <button onClick={() => onNavigate('introduction')} className="text-2xl relative tracking-wider cursor-pointer" style={{ fontFamily: "'Oswald', sans-serif" }}>
                     FullStack JS
@@ -31,6 +34,9 @@ const Sidebar = ({ activeSection, onNavigate }) => {
                         {pillar}
                     </span>
                 ))}
+                {!isMatrix ? <span onClick={enterMatrix} className="cursor-not-allowed px-2 py-1 border border-brand/30 text-brand/40 text-xs tracking-wider uppercase" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                    Do not click
+                </span> : null}
             </div>
 
             <nav className="mt-auto flex flex-col max-md:flex-row max-md:flex-nowrap max-md:justify-center max-md:pb-0 max-md:pt-2 py-6 max-md:gap-0">
