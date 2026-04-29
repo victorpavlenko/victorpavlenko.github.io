@@ -6,6 +6,7 @@ import Introduction from './components/Introduction';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
+import CvPage from './components/CvPage';
 import MatrixRain from './components/MatrixRain';
 import CrtEffect from './components/CrtEffect';
 
@@ -21,6 +22,8 @@ function App() {
   const { activeSection, scrollTo } = useHashNav(scrollRef);
   const { isMatrix, matrixExited } = useTheme();
 
+  const isCvRoute = typeof window !== 'undefined' && window.location.pathname.replace(/\/$/, '') === '/cv';
+
   useEffect(() => {
     if (matrixExited) {
       scrollTo('introduction');
@@ -31,6 +34,10 @@ function App() {
     ['/images/me.webp', '/images/me-matrxi-1.webp', '/images/me-matrxi-2.webp', '/images/me-creep.webp']
       .forEach(src => { const img = new Image(); img.src = src; });
   }, []);
+
+  if (isCvRoute) {
+    return <CvPage />;
+  }
 
   return (
     <div className="flex h-screen overflow-hidden max-md:flex-col max-md:h-auto max-md:overflow-visible">

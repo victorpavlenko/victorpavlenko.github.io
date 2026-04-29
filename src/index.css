@@ -228,3 +228,58 @@ html[data-theme="matrix"] .border-brand\/30 {
 }
 
 /* --- Experience: no img hover needed, logos hidden --- */
+
+
+/* =====================================================
+   CV PAGE (/cv) — ATS-FRIENDLY PRINT VIEW
+   ===================================================== */
+
+body:has(.cv-page) {
+    overflow: auto !important;
+    background: #fff;
+}
+
+.cv-page {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.cv-page h1,
+.cv-page h2,
+.cv-page h3,
+.cv-page h4,
+.cv-page h5 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+@media print {
+    html, body {
+        overflow: visible !important;
+        background: #fff !important;
+        color: #000 !important;
+    }
+    .no-print {
+        display: none !important;
+    }
+    .cv-page {
+        padding: 0.4in !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        font-size: 10pt !important;
+    }
+    .cv-page * {
+        color: #000 !important;
+        background: transparent !important;
+    }
+    .cv-page a {
+        color: #000;
+        text-decoration: none;
+    }
+    .cv-experience-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    /* Hide everything except the CV when printing the home page accidentally */
+    aside, main > section:not([data-print-ok]) {
+        /* leave intact for now — handled by /cv route only */
+    }
+}

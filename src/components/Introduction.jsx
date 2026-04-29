@@ -51,15 +51,15 @@ const Introduction = () => {
                 <span className="block text-newsprint/90 uppercase text-xs tracking-[0.3em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
                     {isMatrix && matrixLevel >= 3
                         ? '░▒▓█ ████████ ████ █ ██ █████'
-                        : 'FullStack JavaScript Lead \u00b7 14 Years'
+                        : 'Lead Software Engineer \u00b7 14 Years'
                     }
                 </span>
                 <p className="text-newsprint/50 text-sm mt-3 italic leading-relaxed">
                     {isMatrix && matrixLevel >= 3
                         ? '█▓░▒ · ░▒▓█ · ▓█▓░ · ▒░ · ▓█'
                         : isMatrix
-                            ? '350K+ merchants · 5M+ users · ₿ · AI · UX'
-                            : <>350K+ merchants &middot; 5M+ users &middot; Crypto &middot; AI &middot; UX</>
+                            ? 'Web · Mobile · Backend'
+                            : <>Web &middot; Mobile &middot; Backend</>
                     }
                 </p>
             </div>

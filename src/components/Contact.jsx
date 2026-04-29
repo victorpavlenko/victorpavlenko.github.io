@@ -26,7 +26,7 @@ const UpworkIcon = ({size = 20, className}) => (
 
 const linkItems = [
     { label: 'UpWork', icon: <UpworkIcon size={30} />, href: 'https://www.upwork.com/freelancers/~016ea051ceaaf85ca4' },
-    { label: 'CV', icon: <FileText size={30} strokeWidth={2} />, href: '/Victor Pavlenko — FullStack JavaScript Lead _ CV.pdf', download: true },
+    { label: 'CV', icon: <FileText size={30} strokeWidth={2} />, href: '/Victor Pavlenko - Lead Software Engineer - CV.pdf', download: true },
     { label: 'LinkedIn', icon: <Linkedin size={30} strokeWidth={2} />, href: 'https://www.linkedin.com/in/victor-pavlenko/' },
     { label: 'GitHub', icon: <Github size={30} strokeWidth={2} />, href: 'https://github.com/victorpavlenko' },
 ];

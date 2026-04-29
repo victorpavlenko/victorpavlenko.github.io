@@ -9,10 +9,10 @@ const navItems = [
 ];
 
 const pillars = [
-    'UX Engineering',
-    'Crypto',
-    'Fintech',
-    'AI',
+    'Software',
+    'JavaScript',
+    'Multi-Industry',
+    'Agentic',
 ];
 
 
@@ -24,7 +24,7 @@ const Sidebar = ({ activeSection, onNavigate }) => {
             <div className="p-6 text-center max-md:p-2 relative">
                 <div className="text-xs tracking-[0.4em] uppercase text-newsprint/50" style={{ fontFamily: "'Oswald', sans-serif" }}>PAVLENKO</div>
                 <button onClick={() => onNavigate('introduction')} className="text-2xl relative tracking-wider cursor-pointer" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                    FullStack JS
+                    Lead Engineer
                 </button>
             </div>
 
